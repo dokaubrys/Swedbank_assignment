@@ -13,108 +13,134 @@
 
         <div class="card-subdiv">
             <div class="form-div" id="formDiv">
-                <form action="">
-                    <div>
+                <form action="" name="incomeForm" onsubmit="return false">
                     <div class="income-header">
                         <h3>Income data and card conditions</h3>
                     </div>
-                    <div class="label-div">
-                        <label class="label-text" for="salary">Monthly salary after taxes
-                             <span>*</span>
-                             <div class="tooltip-div">
-                                 <i class="far fa-question-circle"></i>
-                                    <p class="info-text"> 
-                                        Indicate the earnings which you receive "in hands" (after taxes) per month. 
-                                        The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
-                                    </p> 
-                                
-                             </div>
-                             
-                        </label>
-                        <p class="input-text"><input class="input" name="salary">EUR</p>
-                    </div>
-
-                    <div class="label-div">
-                        <label class="label-text" for="payment">Interest payment day
-                             <span>*</span>
-                             <div class="tooltip-div">
-                                 <i class="far fa-question-circle"></i>
-                                    <p class="info-text"> 
-                                        The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                    </p>                                 
-                             </div>                             
-                        </label>
-                        <select class="payment-day" name=paymentDay >
-                            <option id=""></option>
-                            <option value="10">10</option>
-                            <option value="18">18</option>
-                            <option value="23">23</option>
-                            <option value="29">29</option>
-                        </select>                        
-                    </div>
-                    <div>
-                        
-                    </div> 
-                    <div class="next-div">
-                        <a href="index.html" class="back-btn">Back</a>
-                        <button class="next-btn" type="submit" onclick="showInfo()">Next</button>
-                    </div>
-                    </form>
-                    
-                </div>
+                    <div class="label-div" id="salaryDiv">
+                        <div class="label-sub-div">
+                            <div class="label-sub-div-components">   
+                                    <label class="label-text" for="salary">Monthly salary after taxes
+                                        <span>*</span>
+                                        <div class="tooltip-div">
+                                            <i class="far fa-question-circle"></i>
+                                                <p class="info-text"> 
+                                                    Indicate the earnings which you receive "in hands" (after taxes) per month. 
+                                                    The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
+                                                </p>                                             
+                                        </div>                                        
+                                    </label>
+                                    <p class="input-text"><input class="input" name="salary">EUR</p>
+                            </div>
+                            <div class="label-div">
+                                <label class="label-text" for="payment">Interest payment day
+                                    <span>*</span>
+                                    <div class="tooltip-div">
+                                        <i class="far fa-question-circle"></i>
+                                            <p class="info-text"> 
+                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                            </p>                                 
+                                    </div>                             
+                                </label>
+                                <select class="payment-day" name=paymentDay >
+                                    <option id=""></option>
+                                    <option value="10">10</option>
+                                    <option value="18">18</option>
+                                    <option value="23">23</option>
+                                    <option value="29">29</option>
+                                </select>                        
+                            </div>                    
+                            <div class="next-div">
+                                <a href="index.html" class="back-btn">Back</a>
+                                <button class="next-btn" type="submit" id="nextBtn" onclick="showMyDiv()" >Next</button>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
                    
 
-
+        <div class="card-subdiv">
+            <div class="form-div-second" >
+                <form action="" onsubmit="return false">
                     <div id="personalInfo">
-                    <div class="personal-information-header">
-                        <h3>Personal information</h3>
-                        <a type="button">byb</a>
-                    </div>
-                    <div >
-                    <div class="label-div" >
-                        <label class="label-text" for="salary">Monthly salary after taxes
-                             <span>*</span>
-                             <div class="tooltip-div">
-                                 <i class="far fa-question-circle"></i>
-                                    <p class="info-text"> 
-                                        Indicate the earnings which you receive "in hands" (after taxes) per month. 
-                                        The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
-                                    </p> 
+                        <div class="personal-information-header">
+                            <h3>Personal information</h3>
+                                <!-- <span class="arrow" ></span> -->
+                        </div>
+                        <div id="labelDiv">
+                            <div  class="div-per-info" >
                                 
-                             </div>
-                             
-                        </label>
-                        <p class="input-text"><input class="input" type="salary">EUR</p>
+                                    <label class="label-text-person" for="name">Name
+                                            <span>*</span>
+                                            <!-- <div class="tooltip-div">
+                                                <i class="far fa-question-circle"></i>
+                                                <p class="info-text"> 
+                                                    Indicate the earnings which you receive "in hands" (after taxes) per month. 
+                                                    The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
+                                                </p>                             
+                                            </div>                             -->
+                                    </label>
+                                
+                                <p class="input-text"><input class="input-person" type="name" name="name"></p>
+                            </div>
+                            <div class="div-per-info">
+                                <label class="label-text-person" for="surname">Surname
+                                        <span>*</span>
+                                        <!-- <div class="tooltip-div">
+                                            <i class="far fa-question-circle"></i>
+                                            <p class="info-text"> 
+                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                            </p>                                 
+                                        </div>                              -->
+                                </label>
+                                <p class="input-text"><input class="input-person" type="name" name="surname"></p>                        
+                            </div>
+                            <div class="div-per-info">
+                                <label class="label-text-person" for="adress">Adress
+                                        <span>*</span>
+                                        <!-- <div class="tooltip-div">
+                                            <i class="far fa-question-circle"></i>
+                                            <p class="info-text"> 
+                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                            </p>                                 
+                                        </div>                              -->
+                                </label>
+                                <p class="input-text"><input class="input-person" type="name" name="adress"></p>                        
+                            </div>
+                            <div class="div-per-info">
+                                <label class="label-text-person" for="e-mail">E-mail
+                                        <span>*</span>
+                                        <!-- <div class="tooltip-div">
+                                            <i class="far fa-question-circle"></i>
+                                            <p class="info-text"> 
+                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                            </p>                                 
+                                        </div>                              -->
+                                </label>
+                                <p class="input-text"><input class="input-person" type="name" name="e-mail"></p>                        
+                            </div>
+                            <div class="div-per-info">
+                                <label class="label-text-person" for="city">City
+                                        <span>*</span>
+                                        <!-- <div class="tooltip-div">
+                                            <i class="far fa-question-circle"></i>
+                                            <p class="info-text"> 
+                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                            </p>                                 
+                                        </div>                              -->
+                                </label>
+                                <p class="input-text"><input class="input-person" type="name" name="city"></p>                        
+                            </div>
+                            <div class="next-div">
+                                <a  class="back-btn" type="button" onclick="hideMyDiv()">Back</a>
+                                <button class="next-btn" onclick="">Next</button>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="label-div">
-                        <label class="label-text" for="payment">Interest payment day
-                             <span>*</span>
-                             <div class="tooltip-div">
-                                 <i class="far fa-question-circle"></i>
-                                    <p class="info-text"> 
-                                        The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                    </p>                                 
-                             </div>                             
-                        </label>
-                        <select class="payment-day" name="payment_day" id="">
-                            <option id=""></option>
-                            <option value="10">10</option>
-                            <option value="18">18</option>
-                            <option value="23">23</option>
-                            <option value="29">29</option>
-                        </select>                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div class="next-div">
-                        <a href="index.html" class="back-btn">Back</a>
-                        <button class="next-btn">Next</button>
-                    </div>
-                    </div>
-                    </div>
-                    
+                </form>
+            </div>    
+         </div>           
 
                     
 
@@ -126,9 +152,7 @@
 
                     
                 
-            </div>
-
-        </div>
+    </div>
         
     </div>
 
@@ -139,6 +163,6 @@
 
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

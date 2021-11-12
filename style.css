@@ -132,19 +132,17 @@ form {
     width: 100%;
 }
 .income-header {
-    border-bottom: 1px solid #999;
+    /* border-bottom: 1px solid #999; */
     width: 100%;
     display: flex;
-    padding-bottom: 0.8824rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .personal-information-header {
-    border-bottom: 1px solid #999;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 0.8824rem;
-    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 #personalInfo {
     /* display: none; */
@@ -158,10 +156,20 @@ h3{
 .label-div{
     display: flex;
     align-items: center;
-    padding-top: 1.7647rem;
+    /* padding-top: 1.7647rem; */
+    transition: display 2s ease-in-out;
+}
+#labelDiv {
+    display: none;
+    /* transition: display 2s ease-in-out; */
+}
+.label-text-person {
+    color: #A38B80;
+    width: 15%;
 }
 .label-text {
-    color: #A38B80
+    color: #A38B80;
+    
 }
 .input-text{
     padding-left: 20px;
@@ -172,6 +180,14 @@ h3{
     padding: 10px;
     border-radius: 5px;
     box-shadow: none;
+}
+.input-person {
+    margin-right: 20px;
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-right: 200px;
 }
 span {
     color: #f35b1c;
@@ -258,3 +274,52 @@ span {
 /* #personalInfo{
     display: none;
 } */
+.arrow {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0; 
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #737373;
+  transition: transform 0.4s linear;
+}
+.arrow::after {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    width: 0; 
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #737373;
+  }
+.label-sub-div{
+    width: 100%;
+}
+.label-sub-div-components {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.form-div-second {
+    opacity: 1;
+    display: block;
+    align-items: center;
+    padding-left: 2.9412rem;
+    padding-right: 2.9412rem;
+    margin-top: 2px;
+    background-color: white;
+    border-top-right-radius: 0.7882rem;
+    border-top-left-radius: 0.7882rem;
+    border-bottom-right-radius: 0.7882rem;
+    border-bottom-left-radius: 0.7882rem;
+    transition: opacity 1s ease-in-out;
+    width: 800px;
+}
+.div-per-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
