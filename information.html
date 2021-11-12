@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body>
+    <div class="card">
+
+        <div class="card-subdiv">
+            <div class="form-div" id="formDiv">
+                <form action="">
+                    <div>
+                    <div class="income-header">
+                        <h3>Income data and card conditions</h3>
+                    </div>
+                    <div class="label-div">
+                        <label class="label-text" for="salary">Monthly salary after taxes
+                             <span>*</span>
+                             <div class="tooltip-div">
+                                 <i class="far fa-question-circle"></i>
+                                    <p class="info-text"> 
+                                        Indicate the earnings which you receive "in hands" (after taxes) per month. 
+                                        The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
+                                    </p> 
+                                
+                             </div>
+                             
+                        </label>
+                        <p class="input-text"><input class="input" name="salary">EUR</p>
+                    </div>
+
+                    <div class="label-div">
+                        <label class="label-text" for="payment">Interest payment day
+                             <span>*</span>
+                             <div class="tooltip-div">
+                                 <i class="far fa-question-circle"></i>
+                                    <p class="info-text"> 
+                                        The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                    </p>                                 
+                             </div>                             
+                        </label>
+                        <select class="payment-day" name=paymentDay >
+                            <option id=""></option>
+                            <option value="10">10</option>
+                            <option value="18">18</option>
+                            <option value="23">23</option>
+                            <option value="29">29</option>
+                        </select>                        
+                    </div>
+                    <div>
+                        
+                    </div> 
+                    <div class="next-div">
+                        <a href="index.html" class="back-btn">Back</a>
+                        <button class="next-btn" type="submit" onclick="showInfo()">Next</button>
+                    </div>
+                    </form>
+                    
+                </div>
+                   
+
+
+                    <div id="personalInfo">
+                    <div class="personal-information-header">
+                        <h3>Personal information</h3>
+                        <a type="button">byb</a>
+                    </div>
+                    <div >
+                    <div class="label-div" >
+                        <label class="label-text" for="salary">Monthly salary after taxes
+                             <span>*</span>
+                             <div class="tooltip-div">
+                                 <i class="far fa-question-circle"></i>
+                                    <p class="info-text"> 
+                                        Indicate the earnings which you receive "in hands" (after taxes) per month. 
+                                        The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
+                                    </p> 
+                                
+                             </div>
+                             
+                        </label>
+                        <p class="input-text"><input class="input" type="salary">EUR</p>
+                    </div>
+
+                    <div class="label-div">
+                        <label class="label-text" for="payment">Interest payment day
+                             <span>*</span>
+                             <div class="tooltip-div">
+                                 <i class="far fa-question-circle"></i>
+                                    <p class="info-text"> 
+                                        The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
+                                    </p>                                 
+                             </div>                             
+                        </label>
+                        <select class="payment-day" name="payment_day" id="">
+                            <option id=""></option>
+                            <option value="10">10</option>
+                            <option value="18">18</option>
+                            <option value="23">23</option>
+                            <option value="29">29</option>
+                        </select>                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                    <div class="next-div">
+                        <a href="index.html" class="back-btn">Back</a>
+                        <button class="next-btn">Next</button>
+                    </div>
+                    </div>
+                    </div>
+                    
+
+                    
+
+
+
+
+
+
+
+                    
+                
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
