@@ -7,13 +7,16 @@
     <title>Information</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/fontawesome-free-5.15.4-web/css/all.css">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
 </head>
 <body>
     <div class="card">
-
+        <form method="POST" action='/information.html' name="cardForm" onsubmit="return showMyDiv()">
         <div class="card-subdiv">
             <div class="form-div" id="formDiv">
-                <form action="" name="incomeForm" onsubmit="return false">
+                
                     <div class="income-header">
                         <h3>Income data and card conditions</h3>
                     </div>
@@ -30,7 +33,9 @@
                                                 </p>                                             
                                         </div>                                        
                                     </label>
-                                    <p class="input-text"><input class="input" name="salary">EUR</p>
+                                    
+                                    <p class="input-text"><input id="salary" class="input" name="salary">EUR</p>
+                                    <div id=salary-error></div>
                             </div>
                             <div class="label-div">
                                 <label class="label-text" for="payment">Interest payment day
@@ -42,105 +47,187 @@
                                             </p>                                 
                                     </div>                             
                                 </label>
-                                <select class="payment-day" name=paymentDay >
+                                <select id=dayPayment class="payment-day" name=paymentDay >
                                     <option id=""></option>
                                     <option value="10">10</option>
                                     <option value="18">18</option>
                                     <option value="23">23</option>
                                     <option value="29">29</option>
-                                </select>                        
+                                </select>
+                                <div id=payment-error></div>                        
                             </div>                    
                             <div class="next-div">
                                 <a href="index.html" class="back-btn">Back</a>
-                                <button class="next-btn" type="submit" id="nextBtn" onclick="showMyDiv()" >Next</button>
+                                <a class="next-btn" id="nextBtn" onclick="showMyDiv()" >Next</a>
                             </div>
                         </div>
-                </form>
+                        
+                    
             </div>
         </div>
                    
 
         <div class="card-subdiv">
             <div class="form-div-second" >
-                <form action="" onsubmit="return false">
+                
                     <div id="personalInfo">
                         <div class="personal-information-header">
                             <h3>Personal information</h3>
-                                <!-- <span class="arrow" ></span> -->
                         </div>
                         <div id="labelDiv">
                             <div  class="div-per-info" >
                                 
                                     <label class="label-text-person" for="name">Name
-                                            <span>*</span>
-                                            <!-- <div class="tooltip-div">
-                                                <i class="far fa-question-circle"></i>
-                                                <p class="info-text"> 
-                                                    Indicate the earnings which you receive "in hands" (after taxes) per month. 
-                                                    The amount that we can credit you shall depend on what your net income is, and what financial liabilities you have.
-                                                </p>                             
-                                            </div>                             -->
+                                            <span>*</span>                          
                                     </label>
                                 
-                                <p class="input-text"><input class="input-person" type="name" name="name"></p>
+                                <p class="input-text"><input id="name" class="input-person" type="name" name="name" required></p>
+                                <div id="personName-error"></div>
                             </div>
                             <div class="div-per-info">
                                 <label class="label-text-person" for="surname">Surname
                                         <span>*</span>
-                                        <!-- <div class="tooltip-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <p class="info-text"> 
-                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                            </p>                                 
-                                        </div>                              -->
                                 </label>
-                                <p class="input-text"><input class="input-person" type="name" name="surname"></p>                        
+                                <p class="input-text"><input id="surname" class="input-person" type="surname" name="surname" required></p>
+                                <div id="personSurname-error"></div>                        
                             </div>
                             <div class="div-per-info">
                                 <label class="label-text-person" for="adress">Adress
-                                        <span>*</span>
-                                        <!-- <div class="tooltip-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <p class="info-text"> 
-                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                            </p>                                 
-                                        </div>                              -->
+                                        <span>*</span>                         
                                 </label>
-                                <p class="input-text"><input class="input-person" type="name" name="adress"></p>                        
+                                <p class="input-text"><input id="adress" class="input-person" type="name" name="adress" required></p>
+                                <div id="personAdress-error"></div>                         
                             </div>
                             <div class="div-per-info">
                                 <label class="label-text-person" for="e-mail">E-mail
-                                        <span>*</span>
-                                        <!-- <div class="tooltip-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <p class="info-text"> 
-                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                            </p>                                 
-                                        </div>                              -->
+                                        <span>*</span>                          
                                 </label>
-                                <p class="input-text"><input class="input-person" type="name" name="e-mail"></p>                        
+                                <p class="input-text"><input id="email" class="input-person" type="email"  name="e-mail" required></p>
+                                <div id="personEmail-error"></div>                         
                             </div>
                             <div class="div-per-info">
                                 <label class="label-text-person" for="city">City
-                                        <span>*</span>
-                                        <!-- <div class="tooltip-div">
-                                            <i class="far fa-question-circle"></i>
-                                            <p class="info-text"> 
-                                                The date on which the credit card monthly fee and interest payment, if it is calculated, will be charged from the servicing account.
-                                            </p>                                 
-                                        </div>                              -->
+                                        <span>*</span>                         
                                 </label>
-                                <p class="input-text"><input class="input-person" type="name" name="city"></p>                        
+                                <p class="input-text"><input id="city" class="input-person" type="name" name="city" required></p> 
+                                <div id="personCity-error"></div>                        
                             </div>
                             <div class="next-div">
                                 <a  class="back-btn" type="button" onclick="hideMyDiv()">Back</a>
-                                <button class="next-btn" onclick="">Next</button>
+                                <a class="next-btn" onclick="showMyDiv2()">Next</a>
                             </div>
                         </div>
                     </div>
+                
+            </div>    
+         </div> 
+        </div>
+            <div class="card-subdiv">
+                        <div class="form-div-second" >
+                            
+                                <div id="personalInfo">
+                                    <div class="personal-information-header">
+                                        <h3>The card</h3>
+                                    </div>
+                                    <div id="labelDiv2">
+                                        
+                                        <div  class="div-per-info" >                                
+                                                <label class="label-text-card-color" for="name">Please select a color of the card 
+                                                        <span>*</span>                          
+                                                </label>
+                                                                                
+                                            <p class="input-text">Black<input class="input-color-radio" type="radio" name="color"  id="black" value="black" onclick="radioBtn(this)"></p>
+                                            <p class="input-text">Orange<input class="input-color-radio" type="radio" name="color"  id="orange" value="orange" onclick="radioBtn(this)"></p>
+                                            <p class="input-text">White<input class="input-color-radio" type="radio" name="color"  id="white" value="white" onclick="radioBtn(this)"></p>
+                                            <div id="colorError"></div>
+                                        </div>
+                                        <div class="next-div">
+                                            <a  class="back-btn" type="button" onclick="hideMyDiv2()">Back</a>
+                                            <a class="next-btn" onclick="showMyDiv3()">Next</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            
+                        </div>    
+                    </div>
+
+                    <div class="card-subdiv">
+                                <div class="form-div-second" >
+                                    
+                                        <div id="personalInfo">
+                                            <div class="personal-information-header">
+                                                <h3>Delivery information</h3>
+                                            </div>
+                                            <div id="labelDiv3">
+                                                <div  class="div-per-info" >                                
+                                                        <label class="label-text-card-color" for="name">How would you like to receive the card 
+                                                                <span>*</span>                          
+                                                        </label>                                
+                                                    <p class="input-delivery">By courier<input id="box1" class="input-color" type="checkbox" name="delivery" onclick="myFun(this)"></p>
+                                                    <p class="input-text">In the bank<input id="box2" class="input-color" type="checkbox" name="delivery" onclick="myFun(this)"></p> 
+                                                    <div id="checkError"></div>                              
+                                                </div>
+                                                
+                                                <div class="next-div">
+                                                    <a  class="back-btn" type="button" onclick="hideMyDiv3()">Back</a>
+                                                    <a class="next-btn" onclick="showMyDiv4()">Next</a>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                </div>    
+                            </div>
+
+                <div class="card-subdiv">
+                            <div class="form-div-second" >
+                                
+                                    <div id="personalInfo">
+                                        <div class="personal-information-header">
+                                            <h3>Partnership</h3>
+                                        </div>
+                                        <div id="labelDiv4">
+                                            <div  class="div-per-info" >                                
+                                                    <label class="label-text-card-color" for="name">How would you describe your relationship with Swedbank 
+                                                            <span>*</span>                          
+                                                    </label>                                
+                                                <textarea id="textArea" class="input-color" name="textarea" ></textarea> 
+                                                <div id="textAreaError"></div>                              
+                                            </div>
+                                            <div class="next-div">
+                                                <a  class="back-btn" type="button" onclick="hideMyDiv4()">Back</a>
+                                                <input type="submit" value="Confirm Information" class="next-btn" onclick="showMyDiv5()">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                
+                            </div>    
+                        </div>
+         </form>
+         <div class="card-subdiv">
+            <div class="form-div-second" >
+                <form action="" onsubmit="return false">
+                    <div id="personalInfo">
+                        <div class="personal-information-header">
+                            <h3>Summary</h3>
+                        </div>
+                        <div id="labelDiv5">
+                            <div  class="div-per-info-summary" >                                
+                                <button id="summary" class="next-btn" onclick="showInformation()">Show information</button> 
+                                <div id="showInfo">
+
+                                </div>                         
+                            </div>
+                            <div class="next-div">
+                            </div>
+                        </div>
+                        
+                    </div>
                 </form>
             </div>    
-         </div>           
+         </div>
 
                     
 
@@ -152,7 +239,7 @@
 
                     
                 
-    </div>
+    
         
     </div>
 

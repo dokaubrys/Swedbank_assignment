@@ -6,12 +6,11 @@ body{
     background-color: #FBF2EA;
 }
 .card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 0 auto;
     background-color: transparent;
     padding-top: 50px;
-    
+    width: 50%;
 }
 #cardDiv{
     transition: display 0.9s linear;
@@ -132,7 +131,6 @@ form {
     width: 100%;
 }
 .income-header {
-    /* border-bottom: 1px solid #999; */
     width: 100%;
     display: flex;
     padding-top: 20px;
@@ -144,9 +142,6 @@ form {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#personalInfo {
-    /* display: none; */
-}
 h3{
     font-weight: 700;
     line-height: 0;
@@ -156,16 +151,30 @@ h3{
 .label-div{
     display: flex;
     align-items: center;
-    /* padding-top: 1.7647rem; */
     transition: display 2s ease-in-out;
 }
 #labelDiv {
     display: none;
-    /* transition: display 2s ease-in-out; */
+}
+#labelDiv2 {
+    display: none;
+}
+#labelDiv3 {
+    display: none;
+}
+#labelDiv4 {
+    display: none;
+}
+#labelDiv5 {
+    display: none;
 }
 .label-text-person {
     color: #A38B80;
     width: 15%;
+}
+.label-text-card-color{
+    color: #A38B80;
+    width: 20%;
 }
 .label-text {
     color: #A38B80;
@@ -173,6 +182,9 @@ h3{
 }
 .input-text{
     padding-left: 20px;
+}
+.input-delivery{
+    padding-left: 40px;
 }
 .input {
     margin-right: 20px;
@@ -183,7 +195,20 @@ h3{
 }
 .input-person {
     margin-right: 20px;
-    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-right: 200px;
+}
+.input-color{
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    padding-right: 200px;
+}
+.input-color-radio{
+    margin-right: 20px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: none;
@@ -271,9 +296,7 @@ span {
     border-radius: 3px;
     text-align: left;
 }
-/* #personalInfo{
-    display: none;
-} */
+
 .arrow {
   margin: 0;
   display: inline-block;
@@ -322,4 +345,84 @@ span {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+.div-per-info-summary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#salary-error{
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#payment-error{
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 63px;
+    padding-left: 40px;
+}
+#personName-error {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#personSurname-error {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#personAdress-error {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#personEmail-error {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#personCity-error {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#colorError {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+}
+#checkError {
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+#textAreaError{
+    display: none;
+    color: #ff6c11;
+    font-weight: bold;
+    margin-left: 30px;
+    padding-left: 20px;
+    font-size: 15px;
+}
+#showInfo{
+    display: grid;
 }
